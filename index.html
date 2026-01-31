@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vita Forge Hackathon</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    color:white;
+}
+
+/* ===== Background Video ===== */
+.video-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+/* Dark Overlay */
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    z-index:-1;
+}
+
+/* ===== Sections ===== */
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+/* ===== Floating Title ===== */
+.hero h1{
+    font-size:70px;
+    letter-spacing:3px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:22px;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+
+/* ===== Button ===== */
+.btn{
+    margin-top:30px;
+    padding:14px 35px;
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    border:none;
+    border-radius:30px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+    text-decoration:none;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* ===== Content Section Styling ===== */
+.content-box{
+    max-width:900px;
+}
+
+.content-box h2{
+    margin-top:20px;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.content-box p{
+    margin-bottom:20px;
+    font-size:18px;
+    line-height:1.6;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Video -->
+<video autoplay muted loop playsinline class="video-bg">
+    <source src="vita-bg.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<!-- ===== PAGE 1 ===== -->
+<section class="hero">
+    <h1>Vita Forge</h1>
+    <p>Organized by the Department of Biomedical Engineering</p>
+    <a href="#page2" class="btn">Register Now</a>
+</section>
+
+<!-- ===== PAGE 2 ===== -->
+<section id="page2">
+    <div class="content-box">
+
+        <h2>About the Hackathon</h2>
+        <p>
+            Vita Forge is an innovative biomedical hackathon focused on solving
+            real-world healthcare and engineering challenges through creativity,
+            research, and technology-driven solutions.
+        </p>
+
+        <h2>Tracks</h2>
+        <p>
+            • Medical Device Innovation <br>
+            • AI in Healthcare <br>
+            • Rehabilitation Engineering <br>
+            • Biomedical Signal Processing
+        </p>
+
+        <h2>Prizes</h2>
+        <p>
+            🥇 First Prize – ₹2,500 <br>
+            🥈 Second Prize – ₹1,500 <br>
+            🥉 Third Prize – ₹1,000
+        </p>
+
+        <h2>Event Details</h2>
+        <p>
+            📅 Date: March 15–16 <br>
+            📍 Venue: Biomedical Engineering Department <br>
+            ⏳ Duration: 24 Hours Innovation Sprint
+        </p>
+
+        <!-- PAGE 3: Google Form -->
+        <a href="https://forms.google.com/YOUR_FORM_LINK_HERE" target="_blank" class="btn">
+            Proceed to Registration Form
+        </a>
+
+    </div>
+</section>
+
+</body>
+</html>
